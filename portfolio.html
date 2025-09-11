@@ -3,65 +3,117 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Anuj Aedavelli</title>
+    <title>Anuj Aedavelli</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Anuj Aedavelli</h1>
+    <header class="hero-section">
+      <div class="hero-content">
+        <div class="logo">
+          <div class="pokeball-logo"></div>
+        </div>
+        <div class="hero-text">
+          <h1>Anuj Aedavelli</h1>
+          <p class="tagline">College Student</p>
+        </div>
+      </div>
+    </header>
 
-    <p>
-      <a href="portfolio.html">Portfolio</a> |
-      <a href="qualifications.html">Qualifications</a> |
-      <a href="service.html">Service</a> | <a href="gen.html">AI-Gen</a> |
-      <a href="about.html">About</a>
-    </p>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="qualifications.html">Qualifications</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="genai.html">GenAI</a></li>
+      </ul>
+    </nav>
 
-    <hr />
+    <main class="content-wrapper">
+      <div class="main-content">
+        <section class="main-article">
+          <h2>THE EVOLUTION OF MY PROJECTS</h2>
 
-    <h2>My Portfolio</h2>
-
-    <table width="800" border="1" cellpadding="15">
-      <tr>
-        <td width="200">
-          <img src="none" alt="Project 1" width="180" height="120" />
-        </td>
-        <td>
-          <h3>Ipelint</h3>
-          <p>AI-Driven Patent and Trademark Technology</p>
-          <p><strong>Technologies:</strong> blank</p>
-        </td>
-      </tr>
-    </table>
-
-    <br />
-
-    <table width="800" border="1" cellpadding="15">
-      <tr>
-        <td width="200">
-          <img src="none" alt="Project 2" width="180" height="120" />
-        </td>
-        <td>
-          <h3>Coachence</h3>
-          <p>Amazon DSP</p>
-          <p><strong>Technologies:</strong> Project 2</p>
-        </td>
-      </tr>
-    </table>
-
-    <br />
-
-    <table width="800" border="1" cellpadding="15">
-      <tr>
-        <td width="200">
-          <img src="none" alt="Project 3" width="180" height="120" />
-        </td>
-        <td>
-          <h3>Cropblast</h3>
           <p>
-            AI model for suggesting suitable crops for different enviornments
+            Like Pokemon evolving through experience and battles, I got better
+            and learned more after every project. I started off with full-stack
+            projects but am now doing backend projects.
           </p>
-          <p><strong>Technologies:</strong> none</p>
-        </td>
-      </tr>
-    </table>
+
+          <div class="project-showcase">
+            <article class="project-item">
+              <h3>Ipelint</h3>
+              <p>
+                An AI patent and trademark solution for lawfirms to file
+                trademarks and patents faster in the industry.
+              </p>
+              <div class="project-meta">
+                <span class="tech-badge">Tailwind</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">MongoDB</span>
+                <span class="tech-badge">Python</span>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <h3>Cropblast</h3>
+              <p>
+                A website to allow users to input location and receive crop
+                growth suggestions based on weather trends.
+              </p>
+              <div class="project-meta">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Flask</span>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <h3>Coachence</h3>
+              <p>
+                Designed full-stack web applicationsto support Amazon DSP
+                partners with business tools for performance review to increase
+                productivity.
+              </p>
+              <div class="project-meta">
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">AWS</span>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <aside class="sidebar">
+        <div class="design-selection">
+          <h3>PROJECT TYPES</h3>
+          <nav class="design-list">
+            <ul>
+              <li>
+                <a href="#" class="design-name">Ipelint</a>
+                <span class="designer-name">Rock Type</span>
+              </li>
+              <li>
+                <a href="#" class="design-name">Cropblast</a>
+                <span class="designer-name">Grass Type</span>
+              </li>
+              <li>
+                <a href="#" class="design-name">Coachence</a>
+                <span class="designer-name">Water Type</span>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="zen-resources">
+          <h3>TECHNOLOGIES</h3>
+          <ul>
+            <li><a href="#">REACT</a></li>
+            <li><a href="#">NODE.JS</a></li>
+            <li><a href="#">PYTHON</a></li>
+            <li><a href="#">CLOUD</a></li>
+          </ul>
+        </div>
+      </aside>
+    </main>
   </body>
 </html>

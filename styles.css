@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+}
+
+.landing-page {
+  background-color: #27ae60;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.landing-container {
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+.landing-container p {
+  max-width: 600px;
+  margin: 1.5rem auto 0 auto;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+  font-family: "Trebuchet MS", sans-serif;
+}
+.pokeball-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.8);
+  object-fit: cover;
+}
+
+.pokeball-link:hover .pokeball-image {
+  border-color: #fff;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
+}
+
+.hero-section {
+  background-color: #27ae60;
+  color: white;
+  padding: 3rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+.pokeball-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #ff4757 50%, #fff 50%);
+  border: 6px solid #333;
+  position: relative;
+}
+
+.pokeball-logo::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 4px solid #333;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+  font-size: 1.2rem;
+  font-style: italic;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.nav-active {
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 0;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.nav-active:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: white;
+  transform: translateX(5px);
+}
+
+.main-nav {
+  background: #000;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.main-nav li {
+  flex: 1;
+}
+
+.main-nav a {
+  display: block;
+  padding: 1rem;
+  color: #ccc;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background: #27ae60;
+  color: white;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+  width: 100%;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  padding: 2rem;
+  min-height: 60vh;
+}
+
+.main-content {
+  background: #fff;
+}
+
+/* Typography */
+.intro {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.main-article h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin: 2rem 0 1rem 0;
+  letter-spacing: 0.05em;
+  border-bottom: 3px solid #27ae60;
+  padding-bottom: 0.5rem;
+}
+
+.main-article h3 {
+  font-size: 1.5rem;
+  color: #34495e;
+  margin: 2rem 0 1rem 0;
+  font-weight: bold;
+}
+
+.main-article p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.main-article ul {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.main-article li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.project-showcase {
+  margin: 2rem 0;
+}
+
+.project-item {
+  background: #f8f9fa;
+  border-left: 5px solid #27ae60;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.project-item h3,
+.service-item h3,
+.ai-project h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.project-meta {
+  margin-top: 1rem;
+}
+
+.tech-badge {
+  display: inline-block;
+  background: #27ae60;
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.sidebar {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  height: fit-content;
+  position: sticky;
+  top: 2rem;
+}
+
+.sidebar h3 {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1em;
+  border-bottom: 2px solid #27ae60;
+  padding-bottom: 0.5rem;
+}
+
+.design-selection {
+  margin-bottom: 3rem;
+}
+
+.design-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.design-list li {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.design-list li:last-child {
+  border-bottom: none;
+}
+
+.design-name {
+  display: block;
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+}
+
+.design-name:hover {
+  color: #27ae60;
+}
+
+.designer-name {
+  display: block;
+  color: #7f8c8d;
+  font-size: 0.8rem;
+  font-style: italic;
+  margin-top: 0.2rem;
+}
+
+.zen-resources ul {
+  list-style: none;
+  padding: 0;
+}
+
+.zen-resources li {
+  margin-bottom: 0.5rem;
+}
+
+.zen-resources a {
+  color: #555;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+  display: block;
+  padding: 0.3rem 0;
+}
+
+.zen-resources a:hover {
+  color: #27ae60;
+  transform: translateX(3px);
+}
+
+@media (max-width: 480px) {
+  .pokeball-logo {
+    width: 60px;
+    height: 60px;
+    border-width: 4px;
+  }
+
+  .project-item {
+    padding: 1rem;
+  }
+  .pdf-container {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    border-left: 5px solid #4ecdc4;
+  }
+
+  .pokeball-loader {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #ff4757 50%, #fff 50%);
+    border: 4px solid #333;
+    position: relative;
+    animation: spin 2s linear infinite;
+    margin-bottom: 1rem;
+  }
+}

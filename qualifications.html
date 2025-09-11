@@ -4,35 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anuj Aedavelli</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Anuj Aedavelli</h1>
+    <header class="hero-section">
+      <div class="hero-content">
+        <div class="logo">
+          <div class="pokeball-logo"></div>
+        </div>
+        <div class="hero-text">
+          <h1>Anuj Aedavelli</h1>
+          <p class="tagline">College Student</p>
+        </div>
+      </div>
+    </header>
 
-    <p>
-      <a href="portfolio.html">Portfolio</a> |
-      <a href="qualifications.html">Qualifications</a> |
-      <a href="service.html">Service</a> | <a href="gen.html">AI-Gen</a> |
-      <a href="about.html">About</a>
-    </p>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="qualifications.html" class="active">Qualifications</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="genai.html">GenAI</a></li>
+      </ul>
+    </nav>
 
-    <hr />
+    <main class="content-wrapper">
+      <div class="main-content">
+        <embed
+          src="resume.pdf"
+          type="application/pdf"
+          width="100%"
+          height="600px"
+        />
+      </div>
 
-    <table width="600">
-      <tr>
-        <td width="350">
-          <p>I am aspiring to work in backend development specifically in applied AI and ML. Reason why is because it is where I feel that is the most fun and a very exciting area to learn about. </p>
-        </td>
-        <td width="200">
-          <div
-            style="
-              border: 2px solid black;
-              width: 200px;
-              height: 200px;
-              display: inline-block;
-            "
-          ></div>
-        </td>
-      </tr>
-    </table>
+      <aside class="sidebar">
+        <div class="design-selection">
+          <h3>Explanation</h3>
+          <p>
+            Although I have experience with frontend, I want to work in backend
+            development and do Applied AI for companies. The reason why I choose
+            to do is because I thought that it was the most fun field to learn
+            in and has a very exciting future ahead. I have experience using AI
+            in projects but am actually starting a startup called TAKEOFFX for
+            AI in the construction field.
+          </p>
+        </div>
+      </aside>
+    </main>
   </body>
 </html>
