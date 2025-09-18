@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anuj Aedavelli</title>
-    <link rel="stylesheet" href="styles.css" />
+    <script>
+      // Pick theme from localStorage OR default
+      const savedTheme = localStorage.getItem("selectedTheme") || "styles.css";
+      // Inject correct stylesheet immediately
+      document.write(
+        `<link rel="stylesheet" href="${savedTheme}" id="stylesheet">`
+      );
+    </script>
+    <script src="theme.js" defer></script>
   </head>
   <body>
     <header class="hero-section">
@@ -15,10 +20,10 @@
         <div class="hero-text">
           <h1>Anuj Aedavelli</h1>
           <p class="tagline">College Student</p>
+          <button class="theme-switcher" id="themeSwitcher">Swap</button>
         </div>
       </div>
     </header>
-
     <nav class="main-nav">
       <ul>
         <li><a href="qualifications.html">Qualifications</a></li>
@@ -89,31 +94,82 @@
           <nav class="design-list">
             <ul>
               <li>
-                <a href="#" class="design-name">Ipelint</a>
+                <a class="design-name">Ipelint</a>
                 <span class="designer-name">Rock Type</span>
               </li>
               <li>
-                <a href="#" class="design-name">Cropblast</a>
+                <a class="design-name">Cropblast</a>
                 <span class="designer-name">Grass Type</span>
               </li>
               <li>
-                <a href="#" class="design-name">Coachence</a>
+                <a class="design-name">Coachence</a>
                 <span class="designer-name">Water Type</span>
               </li>
             </ul>
           </nav>
         </div>
 
-        <div class="zen-resources">
+        <div class="resources">
           <h3>TECHNOLOGIES</h3>
           <ul>
-            <li><a href="#">REACT</a></li>
-            <li><a href="#">NODE.JS</a></li>
-            <li><a href="#">PYTHON</a></li>
-            <li><a href="#">CLOUD</a></li>
+            <li><a>REACT</a></li>
+            <li><a>NODE.JS</a></li>
+            <li><a>PYTHON</a></li>
+            <li><a>CLOUD</a></li>
+          </ul>
+        </div>
+
+        <div class="Socials">
+          <h3>Socials</h3>
+          <ul>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/anuj-aedavelli/"
+                target="_blank"
+                >Linkedin</a
+              >
+            </li>
+            <li>
+              <a href="https://x.com/aaedavelli2" target="_blank">Twitter</a>
+            </li>
+            <li>
+              <a href="https://discord.gg/EfTYXz5s" target="_blank"
+                >Discord Server</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/Anuj-Aed" target="_blank">Github</a>
+            </li>
+            <li>
+              <a href="https://www.aggiescreate.com/" target="_blank"
+                >Aggie Create</a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/anuj_aed/" target="_blank"
+                >Instagram</a
+              >
+            </li>
           </ul>
         </div>
       </aside>
     </main>
   </body>
 </html>
+<script>
+  const themeSwitcher = document.getElementById("themeSwitcher");
+  const themeStylesheet = document.getElementById("stylesheet");
+  let currentTheme = "styles.css";
+  window.addEventListener("load", () => {
+    const savedTheme = localStorage.getItem("selectedTheme");
+    if (savedTheme) {
+      currentTheme = savedTheme;
+      themeStylesheet.setAttribute("href", currentTheme);
+    }
+  });
+  themeSwitcher.addEventListener("click", () => {
+    currentTheme = currentTheme === "styles.css" ? "theme2.css" : "styles.css";
+    themeStylesheet.setAttribute("href", currentTheme);
+    localStorage.setItem("selectedTheme", currentTheme);
+  });
+</script>

@@ -3,7 +3,23 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.theme-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #27ae60;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  padding: 0.8rem 1.5rem;
+  border-radius: 0;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
   line-height: 1.6;
