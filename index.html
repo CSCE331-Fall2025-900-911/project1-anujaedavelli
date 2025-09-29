@@ -3,19 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anuj Aedavelli</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Anuj Aedavelli - Portfolio</title>
+    <script>
+      const savedTheme = localStorage.getItem("selectedTheme") || "styles.css";
+      document.write(
+        `<link rel="stylesheet" href="${savedTheme}" id="stylesheet">`
+      );
+    </script>
   </head>
   <body class="landing-page">
+    <div class="pokeball-float"></div>
+    <div class="pokeball-float"></div>
+    <div class="pokeball-float"></div>
+    <div class="pokeball-float"></div>
+
     <div class="landing-container">
+      <div class="header-section">
+        <h1>Welcome, Trainer!</h1>
+        <p class="subtitle">Anuj Aedavelli's Digital Portfolio</p>
+      </div>
+
       <a href="qualifications.html" class="pokeball-link">
         <img src="pokeball.jpg" alt="Enter Portfolio" class="pokeball-image" />
       </a>
-      <p>
-        Welcome to my Website! My name is Anuj Aedavelli. I have always been a
-        fan of pokemon so this is a pokemon themed website for you to enjoy
-        while seeing my accomplishments.
-      </p>
+
+      <div class="welcome-text">
+        <p>
+          Greetings! I'm Anuj Aedavelli, and welcome to my corner of the digital
+          world. Just like a Pokémon Trainer embarks on a journey to become the
+          very best, I've been on my own quest through technology, creativity,
+          and innovation.
+        </p>
+        <p>
+          As a lifelong Pokémon enthusiast, I've designed this website to
+          combine my passion for the franchise with my professional
+          accomplishments. Whether you're here to explore my qualifications,
+          projects, or simply share in the nostalgia of the Pokémon universe,
+          you're in the right place!
+        </p>
+      </div>
+
+      <a href="qualifications.html" class="cta-button">Begin Your Journey</a>
     </div>
   </body>
 </html>

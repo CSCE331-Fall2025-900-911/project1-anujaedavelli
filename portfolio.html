@@ -2,9 +2,7 @@
 <html lang="en">
   <head>
     <script>
-      // Pick theme from localStorage OR default
       const savedTheme = localStorage.getItem("selectedTheme") || "styles.css";
-      // Inject correct stylesheet immediately
       document.write(
         `<link rel="stylesheet" href="${savedTheme}" id="stylesheet">`
       );
@@ -26,6 +24,7 @@
     </header>
     <nav class="main-nav">
       <ul>
+        <li><a href="index.html">Introduction</a></li>
         <li><a href="qualifications.html">Qualifications</a></li>
         <li><a href="portfolio.html" class="active">Portfolio</a></li>
         <li><a href="services.html">Services</a></li>
