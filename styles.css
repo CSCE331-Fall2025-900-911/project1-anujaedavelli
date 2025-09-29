@@ -178,11 +178,21 @@ body {
   width: 100%;
 }
 
-.content-wrapper {
+.content-wrapper2 {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 0.5fr 1fr;
+  gap: 3rem;
+  padding: 2rem;
+  min-height: 60vh;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   gap: 3rem;
   padding: 2rem;
   min-height: 60vh;
